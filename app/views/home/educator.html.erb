@@ -1,0 +1,307 @@
+<div class="row ">
+    <div class="col-xl-4 col-lg-4 col-12 col-sm-12 col-md-4 order-2 order-sm-2 order-md-1 order-lg-1 order-xl-1">
+        <div class="card mb-3 mw-100 text-white bg-primary shadow" style="max-width: 20rem;">
+            <div class="card-header" style="font-size: 18px;">
+                <%= link_to(fa_icon("edit", text: 'Editar'), edit_user_registration_path(current_user, locale: I18n.locale), class: "btn btn-light float-right")%>
+                <b><%=t('general_infos.my_profile')%></b>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title"><%=t('activerecord.attributes.user.name')%></h4>
+                <p class="card-text"><%= current_user.name %></p>
+                <h4 class="card-title"><%=t('general_infos.age')%></h4>
+                <p class="card-text"><%= age(current_user.birthday) %></p>
+                <h4 class="card-title"><%=t('activerecord.attributes.user.email')%></h4>
+                <p class="card-text"><%= current_user.email %></p>
+            </div>
+        </div>
+
+        <div class="card mb-3 mw-100 text-white bg-success shadow" style="max-width: 20rem;">
+            <div class="card-header">
+                MCDM Sênior
+                <br>
+                <a href="/<%=I18n.locale%>/home/info" class="text-white"><b>+ <%=t('buttons.infos')%></b></a>
+                <br>
+                <button type="button" class="btn btn-light float-right" data-toggle="modal" data-target="#modal3"><%=fa_icon("plus", text: t('buttons.suggest_skills'))%></button>
+            </div>
+            <div class="card-body">
+                <div id="panels2" role="tablist">
+                    <div class="card list-group-item-success">
+                        <div class="card-header" role="tab">
+                            <h5 class="mb-0"> <a data-toggle="collapse" href="#collapse3" aria-expanded="true" aria-controls="collapse3" class="list-group-item-success">Alfabetização Digital Móvel</a> </h5>
+                        </div>
+                        <div id="collapse3" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#panels2">
+                          <div class="card-body">
+                            <p>
+                            A Alfabetização Digital Móvel é um grupo de 6 competências específicas que
+                            estão relacionadas com uso dos recursos básicos dos dispositivos móveis como
+                            os smartphones e tablets. As competências específicas são:
+                            <br>
+                            - <b>Uso básico dos DM:</b> Está relacionada com a utilização dos dispositivos móveis (DM)
+                            e seus recursos básicos no cotidiano.
+                            <br>
+                            - <b>Gestão das configurações para mobilidade:</b> Está relacionada com a gestão
+                            básica das configurações básicas de conexão nos (DM).
+                            <br>
+                            - <b>Utilização dos aplicativos:</b> Está relacionada com a utilização básica dos aplicativos
+                            móveis no dia-a-dia, principalmente considerando suas potencialidades e atualizações.
+                            <br>
+                            - <b>Comunicação móvel:</b> Está relacionada com a comunicação básica através dos
+                            dispositivos móveis (DM) criando situações que permitam interações sociais no virtual.
+                            <br>
+                            - <b>Gestão da informação móvel:</b> Está relacionada com a gestão das informações
+                            disponibilizadas tanto nos dispositivos móveis (DM) como em ferramentas virtuais, sendo
+                            capaz de ser crítico e reflexivo sobre o acesso a estas informações.
+                            <br>
+                            - <b>Resiliência para mobilidade:</b> Está relacionada com a possibilidade de enfrentar
+                            as dificuldades provenientes do uso dos dispositivos móveis, seus recursos e aplicativos
+                            considerando as limitações e potenciais da velhice.
+                            </p>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="card list-group-item-success">
+                        <div class="card-header" role="tab">
+                            <h5 class="mb-0"> <a class="collapsed list-group-item-success" data-toggle="collapse" href="#collapse4" aria-expanded="false" aria-controls="collapse4">Letramento Digital Móvel</a> </h5>
+                        </div>
+                        <div id="collapse4" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#panels2">
+                            <div class="card-body">
+                                <p>
+                                O Letramento Digital Móvel é um grupo de 5 competências específicas que estão
+                                relacionadas com práticas de leitura e escrita crítica através e com os dispositivos
+                                móveis como os smartphones e tablets. As competências especificas são:
+                                <br>
+                                - <b>Comunicação móvel:</b> Está relacionada com comunicação através dos dispositivos
+                                móveis (DM) sendo crítico e reflexivo no uso e das informações virtuais. Para tanto, é
+                                necessário que os idosos possuam determinadas competências da alfabetização digital
+                                móvel.
+                                <br>
+                                - <b>Gestão da informação móvel:</b> Está relacionada com a gestão das informações
+                                disponibilizadas tanto nos dispositivos móveis (DM) como em apps, sendo capaz de ser
+                                crítico e reflexivo sobre o acesso a estas informações.
+                                <br>
+                                - <b>Cibersegurança móvel:</b> Está relacionada com a utilização de mecanismos que
+                                permitam a segurança no uso de aplicativos e sites através dos dispositivos móveis,
+                                incluindo a proteção de dados.
+                                <br>
+                                - <b>Perfil Digital móvel:</b> Está relacionada com a gestão dos diferentes perfis digitais,
+                                como e-mail, loja de apps etc., e suas configurações de privacidade nos aplicativos de
+                                redes sociais e que utilizem geolocalização.
+                                <br>
+                                - <b>Resiliência para mobilidade:</b> Está relacionada com o enfrentar as dificuldades
+                                provenientes do uso dos dispositivos móveis, principalmente no que tange a análise sobre
+                                a importância destas para o processo de envelhecimento. Desta forma, é importante o
+                                entendimento do idoso sobre as suas limitações e potencialidades em relação à
+                                alfabetização digital móvel.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card list-group-item-success">
+                        <div class="card-header" role="tab">
+                            <h5 class="mb-0"> <a class="collapsed list-group-item-success" data-toggle="collapse" href="#collapse5" aria-expanded="false" aria-controls="collapse5">Fluência Digital Móvel</a> </h5>
+                        </div>
+                        <div id="collapse5" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#panels2">
+                            <div class="card-body">
+                                <p>
+                                A Fluência Digital Móvel é um grupo de 4 competências específicas questão
+                                relacionadas com a construção de recursos digitais com e para os dispositivos
+                                móveis como vídeos, imagens etc. As competências específicas são:
+                                <br>
+                                - <b>Comunicação móvel:</b> Está relacionada com a comunicação mais avançadas pelos
+                                dispositivos móveis (DM) no qual utilize materiais digitais construídos pelos próprios
+                                idosos.
+                                <br>
+                                - <b>Gestão da informação móvel:</b> Está relacionada com a gestão das informações
+                                disponibilizadas tanto nos dispositivos móveis (DM) como em apps, sendo capaz de
+                                selecionar, analisar, criticar, avaliar, compartilhar e postar informações disponibilizadas.
+                                <br>
+                                - <b>Resiliência para mobilidade:</b> Está relacionada com o enfrentamento de situações
+                                inesperadas e dificuldades provenientes do uso dos dispositivos móveis, considerando
+                                suas potencialidades para a criação de materiais digitais a fim de buscar soluções para a
+                                mobilidade.
+                                <br>
+                                - <b>Criação de conteúdos digitais móveis:</b> Está relacionada com o planejamento e
+                                criação materiais digitais para dispositivos móveis como imagens, vídeos, aplicativos etc.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-sm-12 col-lg-8 col-xl-8 col-md-8 order-lg-2 order-md-2 order-xl-2 order-1 order-sm-1">
+        <div class="card mb-3 mw-100 bg-warning text-white shadow" style="max-width: 20rem;">
+            <div class="card-header">
+                <b><%=t('general_infos.my_students')%></b><br>
+                <button class="btn float-right btn-light" data-html="false" type="button" data-toggle="modal" data-target="#modal1"><%=fa_icon("plus", text: t('buttons.new_group'))%></button>
+                <%= link_to fa_icon("book", text: t('buttons.my_materials')), materials_path, class:"btn float-right btn-light", style: "margin-right: 3px;" %>
+            </div>
+
+            <% @groups.each do |group| %>
+            <div class="card-body">
+                  <div id="panels<%=group.id%>" role="tablist">
+                      <h3><%= group.title %>
+                        <button class="btn float-right btn-light" data-html="false" type="button" data-toggle="modal" data-target="#modal-<%=group.id%>"><%=fa_icon("user", text: t('buttons.update_group'))%></button>
+                      </h3>
+
+                      <% if group.users.count == 0 %>
+                        <p><%=t('general_infos.no_users_in_group')%></p>
+                      <% end %>
+
+                    <% group.users.each do |user| %>
+                        <div class="card list-group-item-warning">
+                            <div class="card-header" role="tab">
+                              <h5 class="mb-0">
+                                <a data-toggle="collapse" href="#collapse<%=user.id%><%=group.id%>" aria-expanded="true" aria-controls="collapse<%=user.id%><%=group.id%>" class="list-group-item-warning">
+                                  <%= user.name %> | <%= age(user.birthday) %> <%=t('general_infos.years')%> | <%= user.email %>
+                                </a>
+                                <button class="btn m-4 btn-warning" type="button" data-toggle="modal" data-target="#modal2" onClick="setUserIdToRecommend(<%=user.id%>)"><%=t('general_infos.mat_suggest')%></button>
+                              </h5>
+                            </div>
+                            <div id="collapse<%=user.id%><%=group.id%>" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#panels<%=group.id%>">
+                              <div class="card-body">
+                                <h2><%=t('general_infos.quiz_results_title')%></h2>
+                                <% user_quizzes = user.quizzes %>
+                                <% user_quizzes.each do |quiz| %>
+
+                                <h3><%=t('general_infos.quiz_results')%> <%=I18n.l quiz.created_at, format: :long %></h3>
+                                <p><%=t('general_infos.done')%>: <%= boolean_to_s(quiz.complete) %> </p>
+
+                                <% if quiz.complete %>
+                                  <% skill_groups_results(quiz).each do |skg_result| %>
+                                    <h4><%=t('general_infos.skill_group')%>: <%= I18n.locale == :es ? translate_to_es_skill_group(skg_result[:title]) : skg_result[:title] %></h4>
+                                    <p><%=t('general_infos.level')%>: <%= I18n.locale == :es ? translate_to_es_level(skg_result[:value]) : skg_result[:value] %></p>
+
+                                    <ul>
+                                      <% skills_results(quiz, skg_result[:id]).each do |sk_result| %>
+                                        <li>
+                                          <h5><%=t('general_infos.skill')%>: <%= I18n.locale == :es ? translate_to_es_skill(sk_result[:title]) : sk_result[:title] %></h5>
+                                          <p><%=t('general_infos.level')%>: <%= I18n.locale == :es ? translate_to_es_level(sk_result[:value]) : sk_result[:value] %></p>
+                                        </li>
+                                      <% end %>
+                                    </ul>
+                                  <% end %>
+                                <% else %>
+                                <p><%=t('general_infos.last_question')%>: <%= last_answered_question(quiz) %></p>
+                                <% end %>
+                                <hr>
+                                <% end %>
+                                </div>
+                            </div>
+                          </div>
+                      <% end %>
+                  </div>
+                <br />
+            </div>
+
+            <div class="modal pg-show-modal" id="modal-<%=group.id%>" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content custom-update-modal">
+
+                        <div class="modal-header">
+                            <h4 class="modal-title"><%=t('buttons.update_group')%></h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <%= form_for :group, :url => url_for(:controller => 'groups', :action => 'update_users_of_group') do |f| %>
+                          <div class="modal-body">
+                            <%= f.hidden_field(:group_id, value: group.id.to_s, required: true)%>
+                            <%= f.label :title, t('modal_pages.name') %>
+                            <%= f.text_field :title, autofocus: true, placeholder: t('inputs_placeholders.group_name'), required: true, style: 'width: 80%' %>
+                            <h5><%=t('general_infos.students')%></h5>
+                            <div class="custom-control custom-checkbox modal-checkbox">
+                              <%= f.collection_check_boxes(:seniors, @seniors, :id, :name , class: "custom-control-input modal-checkbox-itens") %>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default btn-danger" data-dismiss="modal"><%=t('buttons.cancel')%></button>
+                            <%= f.submit t('buttons.save_and_close'), class: "btn btn-primary"%>
+                          </div>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+        </div>
+    </div>
+</div>
+
+<div class="modal pg-show-modal" id="modal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h4 class="modal-title"><%=t('buttons.new_group')%></h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <%= form_for :group, :url => url_for(:controller => 'groups', :action => 'create_group_with_users') do |f| %>
+              <div class="modal-body">
+                <%= f.label :title, t('modal_pages.name') %>
+                <%= f.text_field :title, autofocus: true, placeholder: t('inputs_placeholders.group_name'), required: true, style: 'width: 80%' %>
+                <h5><%=t('general_infos.students')%></h5>
+                <div class="custom-control custom-checkbox modal-checkbox">
+                  <%= f.collection_check_boxes(:seniors, @seniors, :id, :name , class: "custom-control-input modal-checkbox-itens") %>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-danger" data-dismiss="modal"><%=t('buttons.cancel')%></button>
+                <%= f.submit t('buttons.save_and_close'), class: "btn btn-primary"%>
+              </div>
+            <% end %>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade pg-show-modal" id="modal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"><%=t('general_infos.mat_suggest')%></h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+
+            <%= form_for :recommendation, :url => url_for(:controller => 'recommendations', :action => 'recommend_material_to_user') do |f| %>
+            <div class="modal-body">
+                <%= f.label :title, t('modal_pages.title') %>
+                <%= f.text_field :title, autofocus: true, placeholder: t('inputs_placeholders.recommendation_title'), required: true, style: 'width: 80%' %>
+                <br/>
+
+                <%= f.label :content, t('modal_pages.content') %>
+                <%= f.text_area :content, autofocus: true, placeholder: t('inputs_placeholders.recommendation'), required: true, style: 'width: 80%' %>
+                <br/>
+
+                <%= f.hidden_field(:user_id, id: 'user-to-recommend', required: true)%>
+
+                <h5><%=t('general_infos.mats_to_recommend')%>:</h5>
+                <div class="custom-control custom-checkbox checkbox-collection-c modal-checkbox">
+                    <%= f.collection_check_boxes(:materials, @materials, :id, :title , class: "custom-control-input modal-checkbox-itens") %>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-default" data-dismiss="modal"><%=t('buttons.cancel')%></button>
+                <%= f.submit t('buttons.save_and_close'), class: "btn btn-primary"%>
+            </div>
+            <% end %>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade pg-show-modal" id="modal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"><%=t('buttons.suggest_skills')%></h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="form-control" placeholder="<%=t('inputs_placeholders.skill_suggest')%>">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-danger" data-dismiss="modal"><%=t('buttons.cancel')%></button>
+                <button type="button" class="btn btn-primary"><%=t('buttons.save_and_close')%></button>
+            </div>
+        </div>
+    </div>
+</div>

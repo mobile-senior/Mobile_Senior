@@ -1,0 +1,110 @@
+<!-- # Loading -->
+<script>
+    $(document).ready(function() {
+        $('#overlay').fadeOut(2000,function(){
+            $('#container').fadeIn(1000);
+        });
+    });
+</script>
+
+<div id="overlay" class="loading-screen">
+    <p><%=t('page_infos.loading_question')%></p>
+</div>
+<div id="container" style="display:none;">
+<%= form_with(model: @question_answer, local: true) do |form| %>
+  <% if @question_answer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@question_answer.errors.count, "error") %> prohibited this question_answer from being saved:</h2>
+
+      <ul>
+      <% @question_answer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row justify-content-center align-items-center">
+      <div class="col question-card-box">
+          <div class="card shadow">
+              <%= image_tag(google_drive_img_url(@question.image), class: "card-img-top img-fluid question-image") %>
+
+              <div class="field">
+                <%= form.label :user_id, hidden: true %>
+                <%= form.text_field :user_id, value: current_user.id, hidden: true %>
+              </div>
+
+              <div class="field">
+                <%= form.label :question_id, hidden: true %>
+                <%= form.text_field :question_id, value: @question.id, hidden: true %>
+              </div>
+
+              <div class="field">
+                <%= form.label :quiz_id, hidden: true %>
+                <%= form.text_field :quiz_id, value: @quiz_id, hidden: true %>
+              </div>
+
+              <div class="card-body">
+                  <h3 class="card-title">
+                    <% if I18n.locale == :es %>
+                      <%= @question.es_statement %>
+                    <% else %>
+                      <%= @question.statement %>
+                    <% end %>
+                  </h3>
+              </div>
+
+              <div class="p-4">
+                  <h2><%=t('page_infos.answer_statement')%></h2>
+                  <div class="btn-group-toggle btn-group flex-column flex-sm-column flex-lg-row flex-xl-row flex-md-row" data-toggle="buttons">
+                      <h4><%=t('page_infos.answer_low_level')%><br/>
+                        <label class="btn btn-outline-dark btn-lg" onClick='activateSaveBtn()'>
+                          <%= form.radio_button :answer, 1, id: "option1", class: "answer-option", checked: false, autocomplete: false %> 1
+                        </label>
+                        <label class="btn btn-outline-dark btn-lg" onClick='activateSaveBtn()'>
+                          <%= form.radio_button :answer, 2, id: "option2", class: "answer-option", checked: false, autocomplete: false %> 2
+                        </label>
+                        <label class="btn btn-lg btn-outline-dark" style="margin-right: 5px" onClick='activateSaveBtn()'>
+                          <%= form.radio_button :answer, 3, id: "option3", class: "answer-option", checked: false, autocomplete: false %> 3
+                        </label>
+                      </h4>
+                      <h4><%=t('page_infos.answer_medium_level')%><br/>
+                        <label class="btn btn-lg btn-outline-dark" onClick='activateSaveBtn()'>
+                          <%= form.radio_button :answer, 4, id: "option4", class: "answer-option", checked: false, autocomplete: false %> 4
+                        </label>
+                        <label class="btn btn-lg btn-outline-dark" onClick='activateSaveBtn()'>
+                          <%= form.radio_button :answer, 5, id: "option5", class: "answer-option", checked: false, autocomplete: false %> 5
+                        </label>
+                        <label class="btn btn-lg btn-outline-dark" onClick='activateSaveBtn()'>
+                          <%= form.radio_button :answer, 6, id: "option6", class: "answer-option", checked: false, autocomplete: false %> 6
+                        </label>
+                        <label class="btn btn-lg btn-outline-dark" style="margin-right: 5px" onClick='activateSaveBtn()'>
+                          <%= form.radio_button :answer, 7, id: "option7", class: "answer-option", checked: false, autocomplete: false %> 7
+                        </label>
+                      </h4>
+                      <h4><%=t('page_infos.answer_high_level')%><br/>
+                        <label class="btn btn-outline-dark btn-lg" onClick='activateSaveBtn()'>
+                          <%= form.radio_button :answer, 8, id: "option8", class: "answer-option", checked: false, autocomplete: false %> 8
+                        </label>
+                        <label class="btn btn-outline-dark btn-lg" onClick='activateSaveBtn()'>
+                          <%= form.radio_button :answer, 9, id: "option9", class: "answer-option", checked: false, autocomplete: false %> 9
+                        </label>
+                        <label class="btn btn-outline-dark btn-lg" onClick='activateSaveBtn()'>
+                          <%= form.radio_button :answer, 10, id: "option10", class: "answer-option", checked: false, autocomplete: false %> 10
+                        </label>
+                      </h4>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-10 offset-md-1 col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 text-center">
+          <%= form.submit t('buttons.save_and_continue'), class: "btn btn-primary btn-lg m-3 hidden", style: "font-size: 18px;", id: 'save-answer-btn'%>
+          <div id='no-answer-message'><%=t('page_infos.answer_needed_alert')%></div>
+          <%= link_to(t('buttons.cancel'), senior_home_path, class: "btn btn-danger btn-lg m-3", style: "font-size: 18px;") %>
+      </div>
+  </div>
+<% end %>
+</div>

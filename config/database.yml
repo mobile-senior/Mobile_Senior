@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: postgres
+  user: postgres
+
+development:
+  <<: *default
+  database: mobile-senior_development
+
+  
+test:
+  <<: *default
+  database: mobile-senior_test
+
+production:
+  <<: *default
+  database: mobile-senior_production
+  username: mobile-senior
+  password: <%= ENV['MOBILE-SENIOR_DATABASE_PASSWORD'] %>

@@ -1,0 +1,56 @@
+<script>
+  $(document).ready(function() {
+    current_language = '<%=I18n.locale.to_s%>';
+
+    markCurrentLanguage(current_language);
+  });
+</script>
+
+<div class="row pb-5 mb-5">
+    <div class="col-md">
+        <nav class="navbar navbar-light bg-light shadow navbar-expand-sm fixed-top">
+            <div>
+              <% if user_signed_in? %>
+                <% if current_user.type == 'Educator' %>
+                  <%= link_to('Mobile Sênior', educator_home_path, class: "navbar-brand text-primary", style: "font-family: Londrina Solid; font-size: 36px;") %>
+                <% elsif current_user.type == 'Senior' %>
+                  <%= link_to('Mobile Sênior', senior_home_path, class: "navbar-brand text-primary", style: "font-family: Londrina Solid; font-size: 36px;") %>
+                <% end %>
+              <% else %>
+                <%= link_to('Mobile Sênior', new_user_session_path, class: "navbar-brand text-primary", style: "font-family: Londrina Solid; font-size: 36px;") %>
+              <% end %>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler58" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarToggler58" style="font-size: 18px;">
+                <ul class="navbar-nav">
+                    <li class="nav-item mr-4">
+                        <a class="nav-link" href="/<%=I18n.locale%>/home/credits"><%=t('buttons.credits')%></a>
+                    </li>
+                    <li class="nav-item mr-4">
+                        <a class="nav-link" href="/<%=I18n.locale%>/home/info"><%=t('buttons.infos')%></a>
+                    </li>
+                    <% if user_signed_in? %>
+                      <li class="nav-item mr-4">
+                        <%= link_to(t('buttons.logout'), destroy_user_session_path, method: :delete, class: "nav-link") %>
+                      </li>
+                    <% else %>
+                      <li class="nav-item mr-4">
+                        <%= link_to(t('buttons.login'), new_user_session_path, class: "nav-link") %>
+                      </li>
+                    <% end %>
+
+                    <div class="btn-group btn-group-toggle mr-4" data-toggle="buttons">
+                        <label class="btn btn-outline-primary" style="font-size: 18px;" id="btn-site-pt-br" onClick="changeLanguagePtBr()">
+                            <%= radio_button_tag(:options, "PT",id:"option1-pt-br", autocomplete:"off", type:"radio") %>PT
+                        </label>
+                        <label class="btn btn-outline-primary" style="font-size: 18px;" id="btn-site-es" onClick="changeLanguageEs()">
+                            <%= radio_button_tag(:options, "ES",id:"option2-es", autocomplete:"off", type:"radio") %>ES
+                        </label>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>

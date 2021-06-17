@@ -1,0 +1,5 @@
+<% if current_user.type == 'Senior' %>
+  <%= render 'devise/registrations/edit_senior' %>
+<% elsif current_user.type == 'Educator'%>
+  <%= render 'devise/registrations/edit_educator' %>
+<% end %>

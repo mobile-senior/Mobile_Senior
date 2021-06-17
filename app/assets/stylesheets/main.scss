@@ -1,0 +1,108 @@
+.default-body {
+  background-position: right center;
+  background-color: #f2f2f2;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.with-background-body {
+  background-image: image-url('background.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-color: #ffffff;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.custom-update-modal {
+  color: black;
+}
+
+.notification-box {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 8px;
+    padding: 0px;
+    padding-top: 15px;
+}
+
+.question-image {
+  margin: 0 auto;
+}
+
+#new-material-button {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.answer-option{
+  display: none;
+}
+
+.checkbox-collection-c{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.user-selection-activate {
+  background-color: orange;
+  color: white;
+  a { color: white; }
+}
+
+.question-card-box {
+  max-width: 600px;
+}
+
+#no-answer-message {
+  color: red;
+  margin-top: 12px;
+}
+
+.hidden{
+  display: none;
+}
+
+.video-box {
+  width: 100%;
+  max-width: 640;
+  max-height: 390;
+}
+
+.modal-checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px;
+  width: 70%;
+  max-width: 500px;
+}
+
+.modal-checkbox-itens {
+  width: 100%;
+}
+
+input[type='checkbox']:before {
+	// display: block;
+	white-space: pre;
+	content: "\A";
+}
+
+.loading-screen {
+  position:absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+
+  p {
+    color: blue;
+    font-size: 30px;
+  }
+}

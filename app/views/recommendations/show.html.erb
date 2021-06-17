@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-xl-10 offset-xl-1">
+        <div class="jumbotron" style="background-color: rgba(255, 255, 255, 0.7);">
+            <h1 class="display-5"><%=t('general_infos.view_recommendation_title')%></h1>
+            <hr />
+            <h2 class="display-7"><%= format_default_recommendation_title(@recommendation.title) %></h2>
+            <p class="lead"><b><%= I18n.locale == :es ? translate_to_es_recommendation_content(@recommendation.content) : @recommendation.content %></b></p>
+
+            <h3><%=t('quiz_end_page.materials')%>:</h3>
+            <% @recommendation.materials.each do |material| %>
+              <ul>
+                <li>
+                  <div>
+                    <p class="lead"><b><%= format_material_view(I18n.locale, material) %></b></p>
+                    <p class="lead"> <%= link_to fa_icon("eye", text: t('buttons.view_mat')), material_path(material) %></p>
+                  </div>
+                </li>
+              </ul>
+            <% end %>
+
+            <%= link_to fa_icon("arrow-left", text: t('buttons.back')), senior_home_path, class: "btn btn-primary btn-lg" %>
+        </div>
+    </div>
+</div>

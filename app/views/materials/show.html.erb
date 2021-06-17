@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-xl-10 offset-xl-1">
+        <div class="jumbotron" style="background-color: rgba(255, 255, 255, 0.7);">
+            <h1 class="display-3"><%=t('buttons.view_mat')%></h1>
+
+            <p class="lead"><b><%= format_material_view(I18n.locale, @material) %></b></p>
+            <p><b><%=t('material_page.language')%>:</b> <%= format_language(@material.language) %></p>
+
+            <% material_type = material_type(@material.content) %>
+
+            <% if material_type == 'youtube-video' %>
+                <% video_id = youtube_video_id(@material.content) %>
+
+                <iframe id="ytplayer" type="text/html" class='video-box'
+                    src="https://www.youtube.com/embed/<%=video_id%>?autoplay=1&origin=localhost:3000"
+                    frameborder="0">
+                </iframe>
+
+                <p class="lead"> <%= link_to fa_icon("external-link", text: t('general_infos.go_to_youtube')), @material.content, target: :_blank %></p>
+            <% else %>
+                <p class="lead"> <%= link_to fa_icon("external-link", text: t('general_infos.go_to_mat')), @material.content, target: :_blank %></p>
+            <% end %>
+
+            <% if current_user.type == "Educator"%>
+                <div>
+                    <h5><%=t('material_page.mat_data')%></h5>
+                    <p><b><%=t('material_page.languages')%>:</b> <%= format_language(@material.language) %></p>
+                    <p><b><%=t('material_page.created_at')%>: </b> <%= I18n.l @material.created_at, format: :long %></p>
+                    <p><b><%=t('material_page.updated_at')%>:</b> <%= I18n.l @material.updated_at, format: :long %></p>
+                </div>
+                <br/>
+                <%= link_to fa_icon("book", text: t('buttons.my_materials')), materials_path %>
+            <% else %>
+                <%= link_to fa_icon("home", text: t('buttons.back_to_home')), senior_home_path %>
+            <% end %>
+        </div>
+    </div>
+</div>
+

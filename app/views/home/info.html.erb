@@ -1,0 +1,210 @@
+<div class="row">
+    <div class="col-xl-10 offset-xl-1">
+        <div class="jumbotron" style="background-color: rgba(255, 255, 255, 0.7);">
+            <h1 class="display-3"><%=t('infos_view.greetings')%></h1>
+            <p style="font-size: 18px;"><%=t('infos_view.intro_text')%></p>
+            <p style="font-size: 18px;"><%=t('infos_view.contact')%>: <a href="mailto:leticiarmachado@gmail.com" style="font-size: 18px;">leticiarmachado@gmail.com</a></p>
+        </div>
+    </div>
+</div>
+<div class="row ">
+    <div class="col-lg-12">
+        <div class="card border-primary mb-3 mw-100 shadow" style="max-width: 20rem;">
+            <div class="card-header" style="font-size: 24px; font-weight: bold;"><%=t('infos_view.tips')%></div>
+            <div class="card-body" style="font-size: 18px;">
+                <%= form_for @message, :url => url_for(:controller => 'messages', :action => 'create') do |f| %>
+                  <p class="card-text"><p><%=t('infos_view.tips_text_1')%></p><p><%=t('infos_view.tips_text_2')%></p><p><%=t('infos_view.tips_text_3').html_safe%></p><p><%=t('infos_view.tips_text_4')%></p></p>
+                  <div class="form-group">
+                    <%= f.label :name %>
+                    <%= f.text_field :name, class: "form-control", id: "formInput12", placeholder: t('inputs_placeholders.name'), required: true %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.label :email %>
+                    <%= f.text_field :email, class: "form-control", id: "formInput22", placeholder: t('inputs_placeholders.email'), required: true %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.label :content %>
+                    <%= f.text_field :content, class: "form-control", id: "formInput40", placeholder: t('inputs_placeholders.message_content'), required: true %>
+                  </div>
+                  <%= f.submit t('buttons.send'), class: "btn btn-outline-primary" %>
+                <% end %>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="card border-primary mb-3 mw-100 shadow" style="max-width: 20rem;">
+            <div class="card-header" style="font-size: 24px; font-weight: bold;"><%=t('infos_view.skills')%></div>
+            <div class="card-body">
+                <div id="panels1" role="tablist">
+                    <div class="card bg-primary">
+                        <div class="card-header" role="tab">
+                            <h5 class="mb-0"> <a data-toggle="collapse" href="#collapse1" aria-expanded="true" aria-controls="collapse1" class="text-white"><%=t('infos_view.skill_ADM')%></a> </h5>
+                        </div>
+                        <div id="collapse1" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#panels1">
+                            <div class="card-body">
+                                <div class="table-responsive table-responsive-sm">
+                                    <table class="table table-bordered" style="background-color: #b7dcf2;">
+                                        <thead>
+                                            <tr>
+                                                <th><%=t('infos_view.table_header_specific')%></th>
+                                                <th><%=t('infos_view.table_header_low')%></th>
+                                                <th><%=t('infos_view.table_header_medium')%></th>
+                                                <th><%=t('infos_view.table_header_high')%></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><%=t('infos_view.skill_1').html_safe%></td>
+                                                <td><%=t('infos_view.skill_1_text_1').html_safe%></td>
+                                                <td><%=t('infos_view.skill_1_text_2').html_safe%></td>
+                                                <td><%=t('infos_view.skill_1_text_3').html_safe%></td>
+                                            </tr>
+                                            <tr>
+                                                <td><%=t('infos_view.skill_2').html_safe%></td>
+                                                <td><%=t('infos_view.skill_2_text_1').html_safe%></td>
+                                                <td><%=t('infos_view.skill_2_text_2').html_safe%></td>
+                                                <td><%=t('infos_view.skill_2_text_3').html_safe%></td>
+                                            </tr>
+                                            <tr>
+                                                <td><%=t('infos_view.skill_3').html_safe%></td>
+                                                <td><%=t('infos_view.skill_3_text_1').html_safe%></td>
+                                                <td><%=t('infos_view.skill_3_text_2').html_safe%></td>
+                                                <td><%=t('infos_view.skill_3_text_3').html_safe%></td>
+                                            </tr>
+                                            <tr>
+                                                <td><%=t('infos_view.skill_4').html_safe%></td>
+                                                <td><%=t('infos_view.skill_4_text_1').html_safe%></td>
+                                                <td><%=t('infos_view.skill_4_text_2').html_safe%></td>
+                                                <td><%=t('infos_view.skill_4_text_3').html_safe%></td>
+                                            </tr>
+                                            <tr>
+                                                <td><%=t('infos_view.skill_5').html_safe%></td>
+                                                <td><%=t('infos_view.skill_5_text_1').html_safe%></td>
+                                                <td><%=t('infos_view.skill_5_text_2').html_safe%></td>
+                                                <td><%=t('infos_view.skill_5_text_3').html_safe%></td>
+                                            </tr>
+                                            <tr>
+                                                <td><%=t('infos_view.skill_6').html_safe%></td>
+                                                <td><%=t('infos_view.skill_6_text_1').html_safe%></td>
+                                                <td><%=t('infos_view.skill_6_text_2').html_safe%></td>
+                                                <td><%=t('infos_view.skill_6_text_3').html_safe%></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-warning">
+                        <div class="card-header" role="tab">
+                            <h5 class="mb-0"> <a class="collapsed text-white" data-toggle="collapse" href="#collapse2" aria-expanded="false" aria-controls="collapse2"><%=t('infos_view.skill_LDM')%></a> </h5>
+                        </div>
+                        <div id="collapse2" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#panels1">
+                            <div class="card-body">
+                                <div class="table-responsive table-responsive-sm">
+                                    <table class="table table-bordered" style="background-color: #f3d578;">
+                                        <thead>
+                                            <tr>
+                                                <th><%=t('infos_view.table_header_specific')%></th>
+                                                <th><%=t('infos_view.table_header_low')%></th>
+                                                <th><%=t('infos_view.table_header_medium')%></th>
+                                                <th><%=t('infos_view.table_header_high')%></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><%=t('infos_view.skill_7').html_safe%></td>
+                                                <td><%=t('infos_view.skill_7_text_1').html_safe%></td>
+                                                <td><%=t('infos_view.skill_7_text_2').html_safe%></td>
+                                                <td><%=t('infos_view.skill_7_text_3').html_safe%></td>
+                                            </tr>
+                                            <tr>
+                                                <td><%=t('infos_view.skill_8').html_safe%></td>
+                                                <td><%=t('infos_view.skill_8_text_1').html_safe%></td>
+                                                <td><%=t('infos_view.skill_8_text_2').html_safe%></td>
+                                                <td><%=t('infos_view.skill_8_text_3').html_safe%></td>
+                                            </tr>
+                                            <tr>
+                                                <td><%=t('infos_view.skill_9').html_safe%></td>
+                                                <td><%=t('infos_view.skill_9_text_1').html_safe%></td>
+                                                <td><%=t('infos_view.skill_9_text_2').html_safe%></td>
+                                                <td><%=t('infos_view.skill_9_text_3').html_safe%></td>
+                                            </tr>
+                                            <tr>
+                                                <td><%=t('infos_view.skill_10').html_safe%></td>
+                                                <td><%=t('infos_view.skill_10_text_1').html_safe%></td>
+                                                <td><%=t('infos_view.skill_10_text_2').html_safe%></td>
+                                                <td><%=t('infos_view.skill_10_text_3').html_safe%></td>
+                                            </tr>
+                                            <tr>
+                                                <td><%=t('infos_view.skill_11').html_safe%></td>
+                                                <td><%=t('infos_view.skill_11_text_1').html_safe%></td>
+                                                <td><%=t('infos_view.skill_11_text_2').html_safe%></td>
+                                                <td><%=t('infos_view.skill_11_text_3').html_safe%></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-success">
+                        <div class="card-header" role="tab">
+                            <h5 class="mb-0"> <a class="collapsed text-white" data-toggle="collapse" href="#collapse3" aria-expanded="false" aria-controls="collapse3"><%=t('infos_view.skill_FDM')%></a> </h5>
+                        </div>
+                        <div id="collapse3" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#panels1">
+                            <div class="card-body">
+                                <div class="table-responsive table-responsive-sm">
+                                    <table class="table table-bordered" style="background-color: #a4f8ad;">
+                                        <thead>
+                                            <tr>
+                                                <th><%=t('infos_view.table_header_specific')%></th>
+                                                <th><%=t('infos_view.table_header_low')%></th>
+                                                <th><%=t('infos_view.table_header_medium')%></th>
+                                                <th><%=t('infos_view.table_header_high')%></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><%=t('infos_view.skill_12').html_safe%></td>
+                                                <td><%=t('infos_view.skill_12_text_1').html_safe%></td>
+                                                <td><%=t('infos_view.skill_12_text_2').html_safe%></td>
+                                                <td><%=t('infos_view.skill_12_text_3').html_safe%></td>
+                                            </tr>
+                                            <tr>
+                                                <td><%=t('infos_view.skill_13').html_safe%></td>
+                                                <td><%=t('infos_view.skill_13_text_1').html_safe%></td>
+                                                <td><%=t('infos_view.skill_13_text_2').html_safe%></td>
+                                                <td><%=t('infos_view.skill_13_text_3').html_safe%></td>
+                                            </tr>
+                                            <tr>
+                                                <td><%=t('infos_view.skill_14').html_safe%></td>
+                                                <td><%=t('infos_view.skill_14_text_1').html_safe%></td>
+                                                <td><%=t('infos_view.skill_14_text_2').html_safe%></td>
+                                                <td><%=t('infos_view.skill_14_text_3').html_safe%></td>
+                                            </tr>
+                                            <tr>
+                                                <td><%=t('infos_view.skill_15').html_safe%></td>
+                                                <td><%=t('infos_view.skill_15_text_1').html_safe%></td>
+                                                <td><%=t('infos_view.skill_15_text_2').html_safe%></td>
+                                                <td><%=t('infos_view.skill_15_text_3').html_safe%></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="card border-warning mb-3 mw-100 shadow" style="max-width: 20rem;">
+            <div class="card-header" style="font-size: 24px; font-weight: bold;"><%=t('infos_view.use_license')%></div>
+            <div class="card-body">
+                <p class="card-text" style="font-size: 18px;"><p><%=t('infos_view.use_license_text_1')%> <img src="https://licensebuttons.net/l/by-nc-nd/3.0/88x31.png" width="88" height="31"> <b><%=t('infos_view.use_license_abv')%></b></p><p><%=t('infos_view.use_license_text_2')%></p></p>
+            </div>
+        </div>
+    </div>
+</div>

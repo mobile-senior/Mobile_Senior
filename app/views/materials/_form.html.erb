@@ -1,0 +1,48 @@
+<%= form_for(material) do |f| %>
+  <% if material.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(material.errors.count, "error") %> proibiram de salvar esse material:</h2>
+
+      <ul>
+      <% material.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id, hidden: true %>
+    <%= f.text_field :user_id, value: current_user.id, hidden: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :type, hidden: true %>
+    <%= f.text_field :type, value: "EducatorMaterial", hidden: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :alt_lang_title %>
+    <%= f.text_field :alt_lang_title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :content %>
+    <%= f.text_field :content %>
+  </div>
+
+  <div class="field">
+    <%= f.label :language %>
+    <%= f.select :language, ['pt', 'es']%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit t('buttons.save') %>
+  </div>
+<% end %>
+

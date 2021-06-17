@@ -1,0 +1,2 @@
+class EducatorMaterial < Material
+end

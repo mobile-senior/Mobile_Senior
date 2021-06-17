@@ -1,0 +1,482 @@
+---
+es:
+  activerecord:
+    errors:
+      messages:
+        record_invalid: 'La validación falló: %{errors}'
+        restrict_dependent_destroy:
+          has_one: No se puede eliminar el registro porque existe un %{record} dependiente
+          has_many: No se puede eliminar el registro porque existen %{record} dependientes
+    models:
+      message: Mensaje
+      material: Material
+    attributes:
+      message:
+        name: Nombre y apellidos
+        email: Correo Electrónico
+        content: Mensaje
+      material:
+        title: Título
+        description: Descripción
+        content: Contenido
+        type: Especie
+        language: Idioma original
+        alt_lang_title: Título alternativo (ES)
+        alt_lang_description: Descripción alternativa (ES)
+  controller_messages:
+    greetings: ¡Bienvenido al Mobile Senior!
+    group_success: ¡Grupo creado con éxito!
+    group_update: ¡Grupo actualizado con éxito!
+    participation_answer: ¡Respuesta de participación salvaje!
+    participation_answer_q: Respuesta de participación guardada. Usted puede comenzar a resolver su cuestionario!
+    disabled_user: Usuario deshabilitado.
+    answer_saved: ¡Su respuesta fue salvada!
+    quiz_end: ¡Usted terminó su cuestionario!
+    material_created: Material creado con éxito.
+    material_updated: Material actualizado con éxito.
+    material_deleted: Material borrado con éxito.
+    message_sended: Mensaje enviado correctamente.
+    message_fail: Error al enviar el mensaje, vuelva a intentarlo.
+    material_recommendation: ¡Material recomendado con éxito!
+  inputs_placeholders:
+    name: Introduzca su nombre y apellidos
+    email: Introduzca su correo electrónico
+    message_content: Introduzca su mensaje
+    password: Introduzca su contraseña
+    password_confirmation: Introduzca su contraseña de nuevo
+    gender: Introduzca su género
+    numbers_only: Introduzca sólo números
+    country: Introduzca su País
+    state: Introduzca su Provincia
+    city: Introduzca su Ciudad
+    answer: Introduzca su respuesta aquí
+    educational_institution: Introduzca el nombre de la institución
+    group_name: Introduzca el nombre del grupo
+    recommendation_title: Introduzca el título de la recomendación
+    recommendation: Introduzca su recomendación
+    skill_suggest: Introduzca su sugerencia de competencia
+  buttons:
+    logout: Cerrar Sesión
+    login: Iniciar Sesión
+    credits: Créditos
+    infos: Información
+    save_and_continue: Guardar Y Continuar
+    save_and_close: Guardar y Cerrar
+    save: Guardar
+    cancel: Cancelar
+    send: Enviar
+    new_user: Nuevo Registro
+    edit: Editar
+    view: Visualizar
+    redo: Rehacer
+    back: Regreso
+    view_mat: Ver el material
+    back_to_home: Volver a la página principal
+    my_materials: Mis Materiales
+    suggest_skills: Sugerir Competencias
+    new_group: Nuevo grupo
+    update_group: Actualizar Grupo
+    new_mat: Crear nuevo material
+  general_infos:
+    senior: Mayor
+    educator: Educador
+    register_form: Formulario de registro
+    edit_user_form: Editar datos personales
+    male: Masculino
+    female: Femenino
+    other: Otro
+    minimum_password_length: caracteres como mínimo
+    my_profile: Mi perfil
+    age: Edad
+    rec_and_mat: Recomendaciones y Materiales
+    quiz_results_title: Resultados del Cuestionario
+    quiz_results: Resultados del cuestionario
+    made_in: Realizado en
+    done: Terminado
+    skill_group: Grupo de Competencia
+    level: Nivel
+    skill: Competencia
+    last_question: Última pregunta resuelta
+    error: ERROR
+    view_recommendation_title: Ver Recomendación
+    go_to_youtube: Acceder al vídeo en YouTube
+    go_to_mat: Acceder al Material
+    my_students: Mis alumnos
+    no_users_in_group: No hay usuarios en este grupo.
+    mat_suggest: Indicar Material
+    years: años
+    students: Estudiantes
+    mats_to_recommend: Materiales que se recomiendan
+    edit_material: Editar Material
+    create_material: Crear nuevo material
+  modal_pages:
+    name: Nombre
+    title: Título
+    content: Contenido
+    confirmation_question: Você tem certeza ?
+  material_page:
+    language: Idioma
+    pt: Portugues-BR
+    es: Español
+    mat_data: Datos del material
+    created_at: Creado en
+    updated_at: Actualizado en
+  quiz_end_page:
+    loading_recommendations: Cargando recomendaciones ...
+    quiz_end: Fin del cuestionario
+    text_1: ¡Felicitaciones! Usted ha finalizado el cuestionario respecto a las competencias digitales para el uso de los dispositivos móviles (smartphones y tablets).
+    text_2: Las respuestas señaladas indican su nivel para cada grupo de competencias digitales.
+    recommendations: Recomendaciones
+    materials: Materiales
+  senior_notification:
+    greetings: ¡Hola!
+    line_1: Este cuestionario tiene una duración máxima de 15 minutos y objetiva ayudarle a evaluar las posibles competencias digitales que existen respecto al uso de los dispositivos móviles. Al final del cuestionario se señalan las competencias en las cuales usted pude mejorar, así como sugerencias de materiales y cursos en el área que pueden ayudarle en desarrollo de esas competencias.
+    line_2: Observe cuidadosamente las ilustraciones y la descripción en forma de frase. A continuación, realice una autoevaluación respecto a la situación presentada y analice si la misma representa a ti. Usted verá una escala de 10 puntos. Elija el número más adecuado a su respuesta.
+    line_3: Inicialmente usted necesita responder si desea participar o no de la herramienta. Si es así, se le redirige al cuestionario. Si no, usted tendrá su usuario desactivado.
+    question: ¿Quieres participar?
+    answer_yes: 'Sí'
+    answer_no: 'No'
+  user_infos:
+    education_1: Enseñanza primaria incompleta 
+    education_2: Enseñanza primaria completa
+    education_3: Enseñanza secundaria incompleta
+    education_4: Enseñanza secundaria completa
+    education_5: Enseñanza superior incompleta
+    education_6: Enseñanza superior completa
+    education_7: Posgraduación
+    mobile_question: ¿Usted tiene un dispositivo móvil?
+    mobile_question_1: Sí, tengo un smartphone y / o tablet
+    mobile_question_2: Sí, tengo un smartphone
+    mobile_question_3: Sí, tengo un tablet
+    mobile_question_4: No sé qué es eso
+    mobile_question_5: No tengo
+    internet_question: ¿Tiene Internet móvil (3G o 4G) en su dispositivo móvil?
+    internet_question_1: Sí, tengo un dispositivo móvil con Internet móvil (3G o 4G)
+    internet_question_2: No sé cómo informar
+    internet_question_3: No tengo internet móvil
+    course_question: ¿Usted ya participó de algún curso o clase respecto al uso de dispositivos móviles (smartphone e/ou tablet)?
+    course_question_1: Si, ya participé hace más de 2 años
+    course_question_2: Si, ya participé hace más de 1 año
+    course_question_3: No he participado. 
+    course_question_4: No me acuerdo si ya participé.
+    opinion_question: En tu opinión, cuales competencias los mayores deben tener para utilizar un dispositivo móvil (smartphone, tablet)
+    educator_course_question: ¿Usted da clases de inclusión digital para mayores con foco en el uso de los dispositivos móviles?
+    educator_course_question_1: Sí, actualmente doy cursos para mayores
+    educator_course_question_2: Sí, ya he impartido cursos para mayores
+    educator_course_question_3: No, nunca he impartido cursos para mayores
+  page_infos:
+    loading_question: Cargando cuestión ...
+    answer_statement: ¿Te identificas con esta situación?
+    answer_low_level: Poco
+    answer_medium_level: Moderado
+    answer_high_level: Avanzado
+    answer_needed_alert: Elija una respuesta para continuar
+  credits:
+    acknowledgments: Agradecimientos
+    line1: En mi trayectoria (Leticia Machado) muchas personas hicieron la diferencia, contribuyendo para el desarrollo del proyecto .
+    line2: Agradezco a mi orientadora Patricia Alejandra Behar por el total apoyo en la realización del proyecto.
+    line3: Agradezco a Jozelina Silva da Silva Mendes por me auxiliar en la traducción de los textos para el español. 
+    line4: Agradezco a Felipe Silva Vianna da Silva por me auxiliar en los cálculos para la evaluación de las competencias.
+    line5: Agradezco al equipo de la “Unidade de Inclusão Digital de Idosos (UNIDI)” de la “Universidade Federal do Rio Grande do Sul/Brasil”, en especial a Tássia Priscila Fagundes y Deyse Cristina Frizzo Sampaio.
+    line6: Agradezco a CAPES por el auxilio financiero.
+    line7: Agradezco a mi familia y a mis amigos por el apoyo de siempre!
+    line8: Agradezco a los mayores que me enseñan a vivir con sabiduría y alegría.
+    coordenation: Coordinación
+    qualifications: Pedagoga con Habilitación en Multimedios e Informática Educativa, Máster en Gerontología Biomédica, Doctora y Posdoctora en Informática en la Educación.
+    email: Correo electrónico
+    curriculum: Currículo
+    team: Equipo de Diseño y Programación
+    images: Ilustraciones 
+    design: Diseño del Mobile Sênior
+    development: Programación
+  infos_view: 
+    greetings: ¡Hola
+    intro_text: 'La herramienta Mobile Senior fue desarrollada con base en una tesis de Doctorado de la Facultad de Educación de la Universidad Federal de Rio Grande do Sul - Brasil. El objetivo de la tesis fue construir un modelo de competencias digitales para el M-learning con enfoque en los mayores (MCDMS). A partir de esta construcción fue posible apuntar las competencias esenciales para que los mayores utilicen los dispositivos móviles (DM) con autonomía y confianza. Las competencias se dividieron en tres grandes grupos: Alfabetización Digital Móvil, Letramento Digital Móvil y Fluidez Digital Móvil. Para cada competencia se pueden tener tres niveles: Básico, Intermedio y Avanzado, como se muestra a continuación. Cabe señalar que existen otras competencias que pueden no haber sido citadas en el modelo, ya que existen diferentes perfiles.'
+    contact: Para más información contacte la Profesora Doctora Leticia Machado
+    tips: Consejos Para Utilización
+    tips_text_1: La herramienta “Mobile Sênior” es gratuita y creada para mayores con edad igual o superior a 60 años. También es destinada a educadores que actúan con inclusión digital de mayores.
+    tips_text_2: Para utilizar la herramienta “Mobile Sênior”, hay que registrarse en la página principal. Después de eso usted será redireccionado para su área, dónde es posible gerenciar el cuestionario, los materiales y cursos respecto a los dispositivos móviles, además de contactar su educador, si necesario.
+    tips_text_3: El “Mobile Sênior” puede ser utilizado tanto en la computadora (<i>desktop</i>) cómo en el dispositivo móvil (<i>smartphone, tablet</i>).
+    tips_text_4: Si tiene dudas, póngase en contacto con nosotros rellenando el formulario abajo
+    use_license: Licencia de uso
+    use_license_text_1: La herramenta “Mobile Sênior” tiene una licencia del tipo
+    use_license_text_2: Por ello usted puede utilizar y compartir la herramienta desde que asigne los créditos a Leticia Rocha Machado. No será permitido hacer cambios o utilizar su contenido con fines comerciales, solamente es permitido utilizar la herramienta para fines educativos.
+    use_license_abv: Atribución No Comercial - Sin Obra Derivada - CC BY-NC-ND
+    skills: Habilidades
+    table_header_specific: Competencias Específicas
+    table_header_low: Básico
+    table_header_medium: Intermedio
+    table_header_high: Avanzado
+    skill_ADM: Alfabetización Digital Móvil
+    skill_1: <p> <strong>Uso básico de los DM</strong></p><p> <em> Esta competencia está relacionada con la utilización de los dispositivos móviles (DM) y sus recursos básicos en el cotidiano. </em></p>
+    skill_1_text_1: <p> - Conocer y diferenciar los tipos de DM.</p><p> -Conocer las funciones del teclado.</p>
+    skill_1_text_2: <p> - Conocer y diferenciar los tipos de DM.</p><p> -Conocer las funciones del teclado.</p><p> - Conocer y diferenciar los modelos de DM (marca).</p>
+    skill_1_text_3: <p> - Conocer y diferenciar los tipos de DM.</p><p> - Conocer y diferenciar los modelos de DM (marca).</p><p> - Conocer las funciones del teclado</p><p> - Conocer y diferenciar los tipos de sistema operativo (iOs, Android, etc.).</p>
+    skill_2: <p> <strong><em>Gestión de las configuraciones para la movilidad</em></strong></p><p> <em> Esta competencia está relacionada con la gestión básica de las configuraciones básicas de conexión en los (DM). </em></p>
+    skill_2_text_1: <p> - Conocer y diferenciar los tipos de conexión ( <em>wifi, bluetooth, 3G / 4G</em>).</p><p> -Conocer los tipos de sonido y cómo activarlos / desactivarlos.</p>
+    skill_2_text_2: <p> - Conocer y diferenciar los tipos de conexión ( <em>wifi, bluetooth, 3G / 4G</em>).</p><p> -Conocer los tipos de sonido y cómo activarlos / desactivarlos.</p>
+    skill_2_text_3: <p> - Conocer y diferenciar los tipos de conexión ( <em>wifi, bluetooth, 3G / 4G</em>).</p><p> - Conocer los recursos de accesibilidad.</p><p> -Conocer los tipos de sonido y cómo activarlos / desactivarlos.</p>
+    skill_3: <p> <strong>Uso de las aplicaciones</strong></p><p> <em> Esta competencia está relacionada con el uso básico de las aplicaciones móviles en el día a día, principalmente considerando sus potencialidades y actualizaciones. </em></p>
+    skill_3_text_1: <p> - Conocer que es un <em>app</em>.</p><p> - Conocer que es una aplicación.</p>
+    skill_3_text_2: <p> - Conocer que es un <em>app</em>.</p><p> - Diferenciar los tipos de apps (juegos, utilidades, etc).</p>
+    skill_3_text_3: <p> - Conocer que es un <em>app</em>.</p><p> - Diferenciar los tipos de apps (juegos, utilidades, etc).</p><p> - Instalar y desinstalar las aplicaciones.</p>
+    skill_4: <p> <strong>Comunicación móvil</strong></p><p> <em> Esta competencia está relacionada con la comunicación básica a través de los dispositivos móviles (DM), creando situaciones que permitan interacciones sociales en el virtual. </em></p> 
+    skill_4_text_1: <p> -Conocer los tipos de comunicación (síncrono asincrónico).</p>
+    skill_4_text_2: <p> -Conocer los tipos de comunicación (síncrono asincrónico).</p><p> -Conocer los tipos de aplicaciones para la comunicación.</p><p> -Conocer las redes sociales.</p>
+    skill_4_text_3: <p> - Conocer los tipos de comunicación (síncrono asincrónico).</p><p> - Conocer los estilos de comunicación (oral, escrito, imagen, señales, etc.).</p><p> - Conocer los tipos de aplicaciones para la comunicación.</p><p> - Conocer las redes sociales.</p>
+    skill_5: <p> <strong>Gestión de la información móvil</strong></p><p> <em> Esta competencia está relacionada con la gestión de la información, disponible tanto en los dispositivos móviles (DM) como en las herramientas virtuales, siendo capaz de ser crítico y reflexivo sobre el acceso a esta información. </em></p>
+    skill_5_text_1: <p> - Conocer los tipos de información disponibles en los DM (informaciones del aparato y en línea).</p>
+    skill_5_text_2: <p> - Conocer los tipos de información disponibles en los DM (informaciones del aparato y en línea).</p><p> - Conocer los tipos de investigación que pueden ser realizados en Internet a través del DM.</p>
+    skill_5_text_3: <p> - Conocer los tipos de información disponibles en los DM (informaciones del aparato y en línea).</p><p> - Conocer los diferentes recursos para buscar informaciones a través de los DM.</p><p> - Conocer los tipos de investigación que pueden ser realizados en Internet a través del DM.</p>
+    skill_6: <p> <strong>Resiliencia para la movilidad</strong></p><p> <em> Esta competencia está relacionada con la posibilidad de enfrentar las dificultades que surgen del uso de los dispositivos móviles, sus recursos y aplicaciones considerando las limitaciones y potenciales de la vejez. </em></p>
+    skill_6_text_1: <p> - Conocer los límites biopsicosociales de la vejez.</p><p> -Conocer sus propias dificultades en relación a las limitaciones físicas y psicológicas.</p>
+    skill_6_text_2: <p> - Conocer los límites biopsicosociales de la vejez.</p><p> - Conocer los conceptos y aplicación de los DM, sus recursos y aplicaciones.</p><p> -Conocer sus propias dificultades en relación a las limitaciones físicas y psicológicas.</p>
+    skill_6_text_3: <p> - Conocer los límites biopsicosociales de la vejez.</p><p> - Conocer los conceptos y aplicación de los DM, sus recursos y aplicaciones.</p><p> - Conocer los límites y reglas utilización de los DM</p><p> -Conocer sus propias dificultades en relación a las limitaciones físicas y psicológicas.</p>
+    skill_LDM: Letramento Digital Móvil
+    skill_7: <p> <strong>Comunicación móvil</strong></p><p> <em> Esta competencia está relacionada con la comunicación a través de los dispositivos móviles (DM), siendo crítico y reflexivo en el uso y de las informaciones virtuales. Para ello, es necesario que los mayores tengan determinadas competencias de la alfabetización digital móvil. </em></p>
+    skill_7_text_1: <p> - Conocer y diferenciar las formas de lenguaje utilizadas por el público en cuestión.</p><p> - Conocer y diferenciar los tipos de emojis disponibles en las herramientas de comunicación.</p><p> -Conocer la configuración del teclado respecto a la ortografía, la gramática y la corrección automática.</p><p> - Conocer que existen diferentes recursos en las herramientas de comunicación que permiten el uso de múltiples lenguajes como el audio y el texto.</p>
+    skill_7_text_2: <p> - Conocer y diferenciar las formas de lenguaje utilizadas por el público en cuestión.</p><p> - Conocer las reglas de netiqueta para la comunicación.</p><p> - Conocer el lenguaje utilizado en Internet (jerga de internet).</p><p> -Conocer la configuración del teclado respecto a la ortografía, la gramática y la corrección automática.</p><p> - Conocer que existen diferentes recursos en las herramientas de comunicación que permiten el uso de múltiples lenguajes como el audio y el texto.</p>
+    skill_7_text_3: <p> - Conocer y diferenciar las formas de lenguaje utilizadas por el público en cuestión.</p><p> - Conocer las reglas de netiqueta para la comunicación.</p><p> - Conocer el lenguaje utilizado en Internet (jerga de internet).</p><p> - Conocer y diferenciar los tipos de emojis disponibles en las herramientas de comunicación.</p><p> -Conocer la configuración del teclado respecto a la ortografía, la gramática y la corrección automática.</p><p> - Conocer que existen diferentes recursos en las herramientas de comunicación que permiten el uso de múltiples lenguajes como el audio, el texto y el video, etecetera.</p><p> - Conocer la posibilidad de gestión de las informaciones privadas en las herramientas de comunicación de Internet.</p>
+    skill_8: <p> <strong>Gestión de la información móvil</strong></p><p> <em> Esta competencia está relacionada con la gestión de la información disponible tanto en los dispositivos móviles (DM) como en las aplicaciones, siendo capaz de ser crítico y reflexivo sobre el acceso a estas informaciones. </em></p>
+    skill_8_text_1: <p> - Conocer y diferenciar los tipos de informaciones disponibles en las herramientas de comunicación e interacción en los DM.</p>
+    skill_8_text_2: <p> - Conocer y diferenciar los tipos de informaciones disponibles en las herramientas de comunicación e interacción en los DM.</p><p> - Conocer las estrategias de búsqueda de información, como utilización de palabras clave, filtros y motores de búsqueda.</p><p> Conocer herramientas de gestión de información en las redes sociales y de los DM.</p>
+    skill_8_text_3: <p> - Conocer y diferenciar los tipos de informaciones disponibles en las herramientas de comunicación e interacción en los DM.</p><p> - Conocer las estrategias de búsqueda de información, como utilización de palabras clave, filtros y motores de búsqueda.</p><p> -Conocer herramientas de gestión de informaciones en las redes sociales y de los DM.</p><p> - Conocer herramientas de búsqueda y filtro en Internet y sus configuraciones.</p>
+    skill_9: <p> <strong>Ciberseguridad móvil</strong></p><p> <em> Esta competencia está relacionada con la utilización de mecanismos que permitan la seguridad en el uso de aplicaciones y sitios a través de dispositivos móviles, incluyendo la protección de datos. </em></p> 
+    skill_9_text_1: <p> -Conocer posibles mensajes y archivos de virus.</p><p> - Conocer los principales elementos para la seguridad en Internet.</p><p> - Saber que existe contraseña y login que ayuda a mantener la seguridad de los datos en diferentes aplicaciones, redes sociales y funciones del DM.</p>
+    skill_9_text_2: <p> -Conocer posibles mensajes y archivos de virus.</p><p> -Identificar spans en las herramientas de comunicación e interacción.</p><p> - Conocer los principales elementos para la seguridad en Internet.</p><p> - Saber que existe contraseña y login que ayuda a mantener la seguridad de los datos en diferentes aplicaciones, redes sociales y funciones del DM.</p>
+    skill_9_text_3: <p> -Conocer posibles mensajes y archivos de virus.</p><p> -Identificar spans en las herramientas de comunicación e interacción.</p><p> - Conocer los principales elementos para la seguridad en Internet.</p><p> -Conocer herramientas de gestión de seguridad en los DM.</p><p> - Saber que existe contraseña y login que ayuda a mantener la seguridad de los datos en diferentes aplicaciones, redes sociales y funciones del DM.</p>
+    skill_10: <p> <strong>Perfil digital móvil</strong></p><p> <em> Esta competencia está relacionada con la gestión de los diferentes perfiles digitales, como el correo electrónico, la tienda de aplicaciones, etc., y sus configuraciones de privacidad en las aplicaciones de redes sociales y que utilizan la geolocalización. </em></p>
+    skill_10_text_1: <p> - Conocer los riesgos de la divulgación de datos personales en Internet.</p><p> -Conocer herramientas de gestión de seguridad y privacidad en DM.</p>
+    skill_10_text_2: <p> - Conocer los riesgos de la divulgación de datos personales en Internet.</p><p> -Conocer herramientas de gestión de seguridad y privacidad en DM.</p>
+    skill_10_text_3: <p> - Conocer los riesgos de la divulgación de datos personales en Internet.</p><p> -Conocer herramientas de gestión de seguridad y privacidad en DM.</p><p> -Conocer las herramientas de gestión de privacidad en las redes sociales.</p><p> - Entender la gestión de la privacidad pública y ajena.</p>
+    skill_11: <p> <strong>Resiliencia para la movilidad</strong></p><p> <em> Esta competencia se refiere a enfrentar las dificultades que surgen del uso de los dispositivos móviles, principalmente en lo que se refiere al análisis y comprensión de estas dificultades para el proceso de envejecimiento. Por ello, es importante el entendimiento de las personas mayores sobre sus limitaciones y potencialidades en relación a la alfabetización digital móvil. </em></p>
+    skill_11_text_1: <p> -Conocer los límites biopsicosociales de la vejez.</p>
+    skill_11_text_2: <p> -Conocer los límites biopsicosociales de la vejez.</p><p> -Conocer el contexto de las diferentes redes sociales así como sus limitaciones.</p>
+    skill_11_text_3: <p> -Conocer los límites biopsicosociales de la vejez.</p><p> - Conocer los aspectos de seguridad y privacidad en Internet y en los DM, a fin de realizar una autoevaluación y metareflexión sobre su uso.</p><p> -Conocer el contexto de las diferentes redes sociales así como sus limitaciones.</p>
+    skill_FDM: Fluidez Digital Móvil
+    skill_12: <p> <strong>Comunicación móvil</strong></p><p> <em> Esta competencia está relacionada con la comunicación más avanzada a través de los dispositivos móviles (DM), en la que se utilizan materiales digitales construidos por los propios mayores. </em></p>
+    skill_12_text_1: <p> - Conocer los diferentes tipos de comunicación en los DMs.</p>
+    skill_12_text_2: <p> - Conocer los tipos de aplicación para la producción de materiales;</p><p> - Conocer los diferentes tipos de comunicación en los DMs.</p>
+    skill_12_text_3: <p> - Conocer los tipos de aplicación para la producción de materiales con el fin de comunicarse (vídeo, audio, etc.).</p><p> - Conocer los diferentes tipos de comunicación en los DMs.</p><p> -Producir materiales para comunicarse (vídeo, audio, etc.).</p>
+    skill_13: <p> <strong>Gestión de la información móvil</strong></p><p> <em> Esta competencia está relacionada con la gestión de las informaciones disponibles tanto en los dispositivos móviles (DM) como en aplicaciones, siendo capaz de seleccionar, analizar, criticar, evaluar, compartir y publicar informaciones disponibles. </em></p> 
+    skill_13_text_1: <p> - Conocer las formas de gestión de conectividades en los DMs;</p><p> - Conocer los tipos de medios digitales y sus diferenciaciones para las entradas realizadas en las aplicaciones;</p><p> - Conocer y diferenciar la información según el perfil de cada aplicación y medios digitales utilizados.</p>
+    skill_13_text_2: <p> - Conocer las formas de gestión de conectividades en los DMs;</p><p> - Conocer los tipos de medios digitales y sus diferenciaciones para las entradas realizadas en las aplicaciones;</p><p> - Conocer y diferenciar la información según el perfil de cada aplicación y medios digitales utilizados.</p><p> - Conocer las fuentes de información, origen de contenido o recurso, evaluando y analizando sus posibilidades de compartir.</p>
+    skill_13_text_3: <p> - Conocer las formas de gestión de conectividades en los DMs;</p><p> - Conocer los tipos de medios digitales y sus diferenciaciones para las entradas realizadas en las aplicaciones;</p><p> - Conocer y diferenciar la información según el perfil de cada aplicación y medios digitales utilizados.</p><p> - Conocer mecanismos para filtrar la información en las aplicaciones de comunicación e interacción de los DMs;</p><p> -Conocer posibilidades de aumentar la capacidad de almacenamiento en el DM (uso de tarjeta SD, nube, etc.).</p><p> - Conocer las fuentes de información, origen de contenido o recurso, evaluando y analizando sus posibilidades de compartir.</p>
+    skill_14: <p> <strong>Resiliencia para la movilidad</strong></p><p> <em> Esta competencia está relacionada con el enfrentamiento de situaciones inesperadas y dificultades provenientes del uso de los dispositivos móviles, considerando sus potencialidades para la creación de materiales digitales a fin de buscar soluciones para la movilidad. </em></p>
+    skill_14_text_1: <p> -Conocer los aspectos sociales, biológicos y psicológicos involucrados en el proceso de envejecimiento;</p>
+    skill_14_text_2: <p> -Conocer los aspectos sociales, biológicos y psicológicos involucrados en el proceso de envejecimiento;</p><p> Conocer sus límites biopsicosociales para el uso de los DM.</p>
+    skill_14_text_3: <p> -Conocer los aspectos sociales, biológicos y psicológicos involucrados en el proceso de envejecimiento;</p><p> - Conocer las potencialidades y limitaciones para el desarrollo de medios y recursos digitales.</p>
+    skill_15: <p> <strong>Creación de contenidos digitales móviles</strong></p><p> <em> Esta competencia está relacionada con la planificación y creación de materiales digitales para dispositivos móviles como imágenes, vídeos, aplicaciones, etc. </em></p>
+    skill_15_text_1: <p> - Conocer los tipos de medios y recursos digitales existentes para DMs.</p>
+    skill_15_text_2: <p> - Conocer los tipos de medios y recursos digitales existentes para DMs.</p><p> - Buscar, seleccionar y elegir la aplicación más adecuada para la producción de materiales digitales.</p>
+    skill_15_text_3: <p> -Conocer las aplicaciones disponibles para la construcción de medios y recursos digitales como audio, vídeo, imagen, etc.</p><p> - Conocer los tipos de medios y recursos digitales existentes para DMs.</p>
+  date:
+    abbr_day_names:
+    - dom
+    - lun
+    - mar
+    - mié
+    - jue
+    - vie
+    - sáb
+    abbr_month_names:
+    - 
+    - ene
+    - feb
+    - mar
+    - abr
+    - may
+    - jun
+    - jul
+    - ago
+    - sep
+    - oct
+    - nov
+    - dic
+    day_names:
+    - domingo
+    - lunes
+    - martes
+    - miércoles
+    - jueves
+    - viernes
+    - sábado
+    formats:
+      default: "%-d/%-m/%Y"
+      long: "%-d de %B de %Y"
+      short: "%-d de %b"
+    month_names:
+    - 
+    - enero
+    - febrero
+    - marzo
+    - abril
+    - mayo
+    - junio
+    - julio
+    - agosto
+    - septiembre
+    - octubre
+    - noviembre
+    - diciembre
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: alrededor de 1 hora
+        other: alrededor de %{count} horas
+      about_x_months:
+        one: alrededor de 1 mes
+        other: alrededor de %{count} meses
+      about_x_years:
+        one: alrededor de 1 año
+        other: alrededor de %{count} años
+      almost_x_years:
+        one: casi 1 año
+        other: casi %{count} años
+      half_a_minute: medio minuto
+      less_than_x_seconds:
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
+      less_than_x_minutes:
+        one: menos de 1 minuto
+        other: menos de %{count} minutos
+      over_x_years:
+        one: más de 1 año
+        other: más de %{count} años
+      x_seconds:
+        one: 1 segundo
+        other: "%{count} segundos"
+      x_minutes:
+        one: 1 minuto
+        other: "%{count} minutos"
+      x_days:
+        one: 1 día
+        other: "%{count} días"
+      x_months:
+        one: 1 mes
+        other: "%{count} meses"
+      x_years:
+        one: 1 año
+        other: "%{count} años"
+    prompts:
+      second: Segundos
+      minute: Minutos
+      hour: Hora
+      day: Día
+      month: Mes
+      year: Año
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: debe ser aceptado
+      blank: no puede estar en blanco
+      confirmation: no coincide
+      empty: no puede estar vacío
+      equal_to: debe ser igual a %{count}
+      even: debe ser par
+      exclusion: está reservado
+      greater_than: debe ser mayor que %{count}
+      greater_than_or_equal_to: debe ser mayor que o igual a %{count}
+      inclusion: no está incluido en la lista
+      invalid: no es válido
+      less_than: debe ser menor que %{count}
+      less_than_or_equal_to: debe ser menor que o igual a %{count}
+      model_invalid: 'La validación falló: %{errors}'
+      not_a_number: no es un número
+      not_an_integer: debe ser un entero
+      odd: debe ser impar
+      other_than: debe ser distinto de %{count}
+      present: debe estar en blanco
+      required: debe existir
+      taken: ya está en uso
+      too_long:
+        one: es demasiado largo (1 carácter máximo)
+        other: es demasiado largo (%{count} caracteres máximo)
+      too_short:
+        one: es demasiado corto (1 carácter mínimo)
+        other: es demasiado corto (%{count} caracteres mínimo)
+      wrong_length:
+        one: no tiene la longitud correcta (1 carácter exactos)
+        other: no tiene la longitud correcta (%{count} caracteres exactos)
+    template:
+      body: 'Se encontraron problemas con los siguientes campos:'
+      header:
+        one: No se pudo guardar este/a %{model} porque se encontró 1 error
+        other: No se pudo guardar este/a %{model} porque se encontraron %{count} errores
+  helpers:
+    select:
+      prompt: Por favor seleccione
+    submit:
+      create: Crear %{model}
+      submit: Guardar %{model}
+      update: Actualizar %{model}
+  number:
+    currency:
+      format:
+        delimiter: "."
+        format: "%n %u"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "€"
+    format:
+      delimiter: "."
+      precision: 3
+      separator: ","
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion: mil millones
+          million:
+            one: millón
+            other: millones
+          quadrillion: mil billones
+          thousand: mil
+          trillion:
+            one: billón
+            other: billones
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 1
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          eb: EB
+          gb: GB
+          kb: KB
+          mb: MB
+          pb: PB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+        format: "%n %"
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: " y "
+      two_words_connector: " y "
+      words_connector: ", "
+  time:
+    am: am
+    formats:
+      default: "%A, %-d de %B de %Y %H:%M:%S %z"
+      long: "%-d de %B de %Y %H:%M"
+      short: "%-d de %b %H:%M"
+    pm: pm

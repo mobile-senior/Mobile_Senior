@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-xl-10 offset-xl-1">
+        <div class="jumbotron" style="background-color: rgba(255, 255, 255, 0.7);">
+            <h1 class="display-3"><%=t('buttons.my_materials')%></h1>
+
+            <div class="row" id="new-material-button">
+                <div class="new-btn">
+                    <%= link_to t('buttons.new_mat'), new_material_path, type:"button", class:"btn btn-primary" %>
+                    <%= link_to t('buttons.back'), educator_home_path, type:"button", class:"btn btn-outline-danger" %>
+                </div>
+            </div>
+
+            <div class="row">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col"><%=t('modal_pages.title')%></th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <% @materials.each do |material| %>
+                    <tr>
+                      <td><%= format_material_view(I18n.locale, material) %></td>
+                      <td>
+                      <%= link_to fa_icon("eye"), material_path(material)%>
+                      </td>
+                      <% if material.type != 'DefaultMaterial' %>
+                      <td><%= link_to fa_icon("edit"), edit_material_path(material) %></td>
+                      <td><%= link_to fa_icon("trash"), material_path(material),
+                            style: "color: red;",
+                            method: :delete,
+                            data: { confirm: t('modal_pages.confirmation_question') } %></td>
+                      <% else %>
+                      <td>-</td>
+                      <td>-</td>
+                      <% end %>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </div>
+        </div>
+    </div>
+</div>
+

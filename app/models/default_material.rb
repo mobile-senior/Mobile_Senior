@@ -1,0 +1,2 @@
+class DefaultMaterial < Material
+end

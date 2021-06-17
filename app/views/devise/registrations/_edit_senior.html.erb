@@ -1,0 +1,102 @@
+<div class="row ">
+    <div class="col-xl-6 col-lg-6 col col-sm col-md-8 offset-xl-1 offset-lg-1 offset-md-1">
+        <h1 class="bg-warning text-white p-2 mb-0 text-center" style="border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem;"><%=t('general_infos.edit_user_form')%></h1>
+        <div class="bg-white shadow p-4">
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <%= devise_error_messages! %>
+
+              <%= f.hidden_field :type, value: "Senior"%>
+
+              <div class="form-group pt-4 " style="font-size: 18px;">
+                <%= f.label :name, for: "formInput185" %>
+                <%= f.text_field :name, autofocus: true, class: "form-control", id: "formInput185", placeholder: t('inputs_placeholders.name'), required: true %>
+              </div>
+              <div class="form-group pt-4 " style="font-size: 18px;">
+                <%= f.label :birthday, for: "formInput175" %>
+                <%= f.date_field :birthday, autofocus: true, class: "form-control", id: "formInput175", placeholder:"dd/mm/aaaa", required: true %>
+              </div>
+              <div class="form-group pt-4" style="font-size: 18px;">
+                <label for="formInput47"><%=t('activerecord.attributes.user.gender')%></label>
+                <div class="custom-control custom-radio">
+                  <%= f.radio_button :gender, 'Masculino', id: "formCustomCheckbox81", class: "custom-control-input", checked: true %>
+                  <%= f.label 'gender_Masculino', t('general_infos.male'), class: "custom-control-label", for: "formCustomCheckbox81" %>
+                </div>
+                <div class="custom-control custom-radio">
+                  <%= f.radio_button :gender, 'Feminino', id: "formCustomCheckbox88", class: "custom-control-input" %>
+                  <%= f.label 'gender_Feminino', t('general_infos.female'), class: "custom-control-label", for: "formCustomCheckbox88" %>
+                </div>
+                <div class="custom-control custom-radio">
+                  <%= f.radio_button :gender, "Outro", id: "formCustomCheckbox94", class: "custom-control-input" %>
+                  <%= f.label 'gender_Outro', t('general_infos.other'), class: "custom-control-label", for: "formCustomCheckbox94" %>
+                </div>
+                <input type="text" class="form-control" id="formInput47" placeholder="<%=t('inputs_placeholders.gender')%>">
+              </div>
+
+              <div class="form-group pt-4" style="font-size: 18px;">
+                <%= f.label :email, for: "formInput165" %>
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", id: "formInput165", placeholder: t('inputs_placeholders.email'), required: true %>
+              </div>
+
+              <div class="form-group pt-4" style="font-size: 18px;">
+                <%= f.label :password %>
+                <% if @minimum_password_length %>
+                <em>(<%= @minimum_password_length %> <%=t('general_infos.minimum_password_length')%>)</em>
+                <% end %><br />
+                <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: t('inputs_placeholders.password'), required: true %>
+              </div>
+
+              <div class="form-group pt-4" style="font-size: 18px;">
+                <%= f.label :password_confirmation %><br />
+                <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: t('inputs_placeholders.password_confirmation'), required: true %>
+              </div>
+
+              <div class="form-group pt-4" style="font-size: 18px;">
+                <%= f.label :phone, for: "formInput273" %>
+                <%= f.number_field :phone, autofocus: true, class: "form-control", id: "formInput273", placeholder: t('inputs_placeholders.numbers_only'), required: true %>
+              </div>
+              <div class="form-group pt-4" style="font-size: 18px;">
+                <%= f.label :country %>
+                <%= f.text_field :country, autofocus: true, class: "form-control mb-2", id: "formInput194", placeholder: t('inputs_placeholders.country'), required: true %>
+                <%= f.label :state %>
+                <%= f.text_field :state, autofocus: true, class: "form-control mb-2", placeholder: t('inputs_placeholders.state'), required: true %>
+                <%= f.label :city %>
+                <%= f.text_field :city, autofocus: true, class: "form-control mb-2", placeholder: t('inputs_placeholders.city'), required: true %>
+              </div>
+
+              <div class="form-group pt-4" style="font-size: 18px;">
+                  <label for="formInput283"><%=t('activerecord.attributes.user.education')%></label>
+                  <div class="custom-control custom-radio">
+                    <%= f.radio_button :education, 'Ensino Fundamental Incompleto', id: "formCustomCheckbox307", class: "custom-control-input", checked: true  %>
+                    <%= f.label 'education_EFI', t('user_infos.education_1'), class: "custom-control-label", for: "formCustomCheckbox307" %>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <%= f.radio_button :education, 'Ensino Fundamental Completo', id: "formCustomCheckbox305", class: "custom-control-input" %>
+                    <%= f.label 'education_EFC', t('user_infos.education_2'), class: "custom-control-label", for: "formCustomCheckbox305" %>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <%= f.radio_button :education, 'Ensino Médio Incompleto', id: "formCustomCheckbox303", class: "custom-control-input" %>
+                    <%= f.label 'education_EMI', t('user_infos.education_3'), class: "custom-control-label", for: "formCustomCheckbox303" %>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <%= f.radio_button :education, 'Ensino Médio Completo', id: "formCustomCheckbox301", class: "custom-control-input" %>
+                    <%= f.label 'education_EMC', t('user_infos.education_4'), class: "custom-control-label", for: "formCustomCheckbox301" %>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <%= f.radio_button :education, 'Ensino Superior Incompleto', id: "formCustomCheckbox299", class: "custom-control-input" %>
+                    <%= f.label 'education_ESI', t('user_infos.education_5'), class: "custom-control-label", for: "formCustomCheckbox299" %>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <%= f.radio_button :education, 'Ensino Superior Completo', id: "formCustomCheckbox297", class: "custom-control-input" %>
+                    <%= f.label 'education_ESC', t('user_infos.education_6'), class: "custom-control-label", for: "formCustomCheckbox297" %>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <%= f.radio_button :education, 'Pós-Graduação', id: "formCustomCheckbox295", class: "custom-control-input" %>
+                    <%= f.label 'education_PG', t('user_infos.education_7'), class: "custom-control-label", for: "formCustomCheckbox295" %>
+                  </div>
+              </div>
+
+              <%= f.submit t('buttons.save'), class: "btn btn-primary btn-lg btn-block shadow-lg mt-4 mb-4 ", style: "font-size: 18px;" %>
+            <% end %>
+        </div>
+    </div>
+</div>

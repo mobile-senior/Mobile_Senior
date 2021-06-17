@@ -1,0 +1,7 @@
+<% user_type = params[:type] %>
+
+<% if user_type == 'Senior' %>
+  <%= render 'devise/registrations/new_senior' %>
+<% elsif user_type == 'Educator'%>
+  <%= render 'devise/registrations/new_educator' %>
+<% end %>
