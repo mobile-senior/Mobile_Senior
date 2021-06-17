@@ -1,4 +1,4 @@
-FROM ruby:2.7.0
+FROM ruby:3.0.0
 
 # add nodejs and yarn dependencies for the frontend
 RUN curl -sL https://nsolid-deb.nodesource.com/nsolid_setup_4.x | bash -
