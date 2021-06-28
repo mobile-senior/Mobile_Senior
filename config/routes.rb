@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   scope "(:locale)", locale: LOCALES do
     devise_for :masters, ActiveAdmin::Devise.config
-    ActiveAdmin.routes(self)
+    # ActiveAdmin.routes(self)
     devise_for :users
 
     require "sidekiq/web"
